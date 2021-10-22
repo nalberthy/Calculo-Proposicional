@@ -1,0 +1,314 @@
+<!-- <div class="container mt-4">
+  <div class="row d-flex">
+    <div class="col-8">
+      <input type="text" class="form-control" placeholder="P->Q,P|-Q" aria-label="Insira Formula Proposicional"
+        [(ngModel)]="xml_input">
+    </div>
+    <div class="col-2">
+      <button class="btn btn-outline-secondary" type="button" (click)="inicializar()">Inicializar</button>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="container mt-4">
+
+  <div class="container">
+    <div *ngIf="data">
+      <!-- Fórmula selecionada -->
+      <div class="card shadow-sm mb-3">
+        <div class="card-header d-flex justify-content-center title-custom-card m-0">
+          Fórmula
+        </div>
+        <div class="card-body card-custom-body d-flex align-items-center justify-content-center  ">
+          <span class="text-pink">{{data.formula}}</span>
+        </div>
+      </div>
+
+      <form [formGroup]="form">
+        <!-- Derivação -->
+        <div class="form-group">
+          <div class="card shadow-sm mb-3">
+            <div class="card-body p-0">
+              <table class="table table-borderless table-custom " *ngIf="data" style="line-height: 0" >
+                <tbody >
+                  <tr *ngFor="let derivacao of data.derivacoes;let i=index" class="linha-hip" id=linha-{{i}} (click)="onClickTable(i)" height="50">
+                    <td width="30" class="espacamento p-0">
+                      <input type="checkbox" class="d-none" id={{i}} value={{derivacao.indice}}>
+                    </td>
+                    <td class="text-center align-middle espacamento p-0" scope="row" width="40"> {{derivacao.indice}} </td>
+                    <td width='10' class="p-0"></td>
+                    <td class="p-0"><table  class=" table-custom" >
+                      <tbody >
+                        <tr height="50">
+                          <!-- <td style="border-left:2px solid #000000;padding:5px">&nbsp;</td> -->
+                          <!-- nivel 1 -->
+                          <td *ngIf="derivacao.hip==1">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==1">&nbsp;</td>
+                          <!-- nivel 2 -->
+                          <td *ngIf="derivacao.hip==2">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==2">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==2">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==2">&nbsp;</td>
+                          <!-- nivel 3 -->
+                          <td *ngIf="derivacao.hip==3">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==3">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==3">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==3">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==3">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==3">&nbsp;</td>
+                          <!-- nivel 4 -->
+                          <td *ngIf="derivacao.hip==4">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==4">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==4">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==4">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==4">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==4">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==4">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==4">&nbsp;</td>
+
+                          <!-- nivel 5 -->
+                          <td *ngIf="derivacao.hip==5">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==5">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==5">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==5">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==5">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==5">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==5">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==5">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==5">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==5">&nbsp;</td>
+
+                          <!-- nivel 6 -->
+                          <td *ngIf="derivacao.hip==6">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==6">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==6">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==6">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==6">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==6">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==6">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==6">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==6">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==6">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==6">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==6">&nbsp;</td>
+
+                          <!-- nivel 7 -->
+                          <td *ngIf="derivacao.hip==7">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==7">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==7">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==7">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==7">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==7">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==7">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==7">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==7">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==7">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==7">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==7">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==7">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==7">&nbsp;</td>
+
+                          <!-- nivel 8 -->
+                          <td *ngIf="derivacao.hip==8">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==8">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==8">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==8">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==8">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==8">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==8">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==8">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==8">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==8">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==8">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==8">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==8">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==8">&nbsp;</td>
+
+                          <td *ngIf="derivacao.hip==8">&nbsp;</td>
+                          <td style="border-left:2px solid #000000;padding:5px" *ngIf="derivacao.hip==8">&nbsp;</td>
+
+                          <td>{{derivacao.str}}</td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                    
+                    <!-- <td class="align-middle" width="60%">{{derivacao.str}}</td> -->
+                    <td class="text-center align-middle p-0" width="150">{{derivacao.ident}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inserção formula proposicional -->
+        <div class="form-group">
+          <div class="card shadow-sm" *ngIf="form.controls.regra.value == 'Hipotese_Raa'" style="background-color: #f8f9fa;">
+            <div class="card-body">
+              <div class="container">
+                <label >Predicativo para Raa:</label>
+                <input type="input" class="form-control" formControlName="xml_entrada"
+                 >
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm" *ngIf="form.controls.regra.value == 'Hipotese_PC'" style="background-color: #f8f9fa;">
+            <div class="card-body" >
+              <div class="container">
+                <label>Predicativo para PC:</label>
+                <input type="input" class="form-control" formControlName="xml_entrada"
+                  >
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow-sm" *ngIf="form.controls.regra.value == 'Introducao_Disjuncao'" style="background-color: #f8f9fa;">
+            <div class="card-body">
+              <div class="container"  >
+                <label>Predicativo para Disjunção:</label>
+                <input type="input" class="form-control" formControlName="xml_entrada"
+                 >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aplicação de regras -->        
+        <!-- <div class="form-group" *ngIf="data.msg!='Atingiu a Conclusão'"></div> -->
+        <div class="form-group">
+          <div class="card shadow-sm mt-3" *ngIf="data" >
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-6">
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ="Modus_Ponens" value="Modus_Ponens" class="custom-control-input" formControlName="regra">
+                    <label class="custom-control-label mx-2" for="Modus_Ponens">Modus Ponens</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ="Introducao_Disjuncao" value="Introducao_Disjuncao" class="custom-control-input"
+                      formControlName="regra">
+                    <label class="custom-control-label mx-2" for="Introducao_Disjuncao">Introdução da Disjunção</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ='Eliminacao_Disjuncao' value='Eliminacao_Disjuncao' class="custom-control-input"
+                      formControlName="regra">
+                    <label class="custom-control-label mx-2" for='Eliminacao_Disjuncao'>Eliminação da Disjunção</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ='Introducao_Conjuncao' value='Introducao_Conjuncao' class="custom-control-input"
+                      formControlName="regra">
+                    <label class="custom-control-label mx-2" for='Introducao_Conjuncao'>Introdução da Conjunção</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ='Eliminacao_Conjuncao' value='Eliminacao_Conjuncao' class="custom-control-input"
+                      formControlName="regra">
+                    <label class="custom-control-label mx-2" for='Eliminacao_Conjuncao'>Eliminação da Conjunção</label>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ='Eliminacao_Negacao' value='Eliminacao_Negacao' class="custom-control-input" formControlName="regra">
+                    <label class="custom-control-label mx-2" for='Eliminacao_Negacao'>Eliminação da Negação</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ='Introducao_Bicondicional' value='Introducao_Bicondicional' class="custom-control-input"
+                      formControlName="regra">
+                    <label class="custom-control-label mx-2" for='Introducao_Bicondicional'>Introdução Bicondicional</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ='Eliminacao_Bicondicional' value='Eliminacao_Bicondicional' class="custom-control-input"
+                      formControlName="regra">
+                    <label class="custom-control-label mx-2" for='Eliminacao_Bicondicional'>Eliminação Bicondicional</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" value='Hipotese_PC' class="custom-control-input" formControlName="regra" id="Hipotese_PC">
+                    <label class="custom-control-label mx-2" for="Hipotese_PC">Prova do Condicional</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ='Hipotese_Raa' value='Hipotese_Raa' class="custom-control-input" formControlName="regra">
+                    <label class="custom-control-label mx-2" for='Hipotese_Raa'>Redução ao Absurdo</label>
+                  </div>
+                  <div class="custom-control custom-radio mb-2">
+                    <input type="radio" id ='Finish_Hip' value='Finish_Hip' class="custom-control-input" formControlName="regra">
+                    <label class="custom-control-label mx-2" for='Finish_Hip'>Finalizar Hipotese</label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="card-footer text-muted">
+              <div class="d-flex justify-content-center flex-row  justify-content-around">
+                <button type="button" class="btn btn-primary" (click)='derivar()'><i
+                  class="far fa-play-circle"></i>&nbsp;&nbsp;Aplicar</button>
+                
+                  <button type="button" class="btn btn-func" [disabled]="!data.finish_exe" (click)='finalizar_exercicio()'><i
+                    class="far fa-play-circle"></i>&nbsp;&nbsp;Finalizar Exercicio</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- <button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button> -->
+
+<ng-template #erroDerivacao>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Erro ao Derivar</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Tente novamente selecionando as instancias e regras corretamente!
+  </div>
+</ng-template>
+
+<ng-template #exercicioFinish>
+  <!-- <div class="modal-header"> -->
+    <!-- <h4 class="modal-title pull-left">Erro ao Derivar</h4> -->
+    <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div> -->
+  <div class="modal-body" style="text-align: center;">
+    Parabéns Você Atingiu a Conclusão! 
+    <br>
+    Este exercício já finalizado pelo jogador.
+  </div>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+    Sair
+  </button>
+</ng-template>

@@ -1,0 +1,44 @@
+.btn-func{
+    color: #fff;
+    background-color:#1cc88a;
+}
+
+.btn-func:hover{
+    background-color: #2ca377;
+
+}
+
+.title-custom-card{
+    background:#ffc107;
+    font-weight: bold;
+    color: #4e73df;
+  
+}
+.card-custom-body{
+    background: rgba(124, 124, 124, 0);
+    font-weight: bold;
+    color: #4e73df;
+}
+
+.linha-hip{
+    cursor: pointer;
+    /* border: 1px solid transparent; */
+}
+
+.linha-hip:hover{
+    background-color: #4e72df90;
+    /* border: 1px solid #4e73df; */
+
+}
+
+.selecionado{
+    background-color: #4e73df;
+    color: white;
+}
+
+.espacamento{
+    /* padding: 22px */
+}
+.table-custom{
+    font-weight: bold;
+}

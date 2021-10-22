@@ -1,0 +1,316 @@
+<div class="container-fluid py-2">
+    <div class="row">
+        <div class="col-12">
+            <div class="card  mb-5">
+                <div class="card-header custom-card-header py-3">
+                    <h6 class="m-0 font-weight-bold">Estudo - Criação de Formulas Para Derivação Livre</h6>
+                </div>
+                <div class="card-body">
+
+                    <p> Os <code>conectivos lógicos</code> abaixo são utilizados no módulo para representação de
+                        fórmulas
+                        proposicionais. Para
+                        representar uma fórmula, deve-se utilizar os conectivos listados abaixo.</p>
+                    <div class="d-flex justify-content-center">
+                        <div class="col-md-6 text-center">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Operação</th>
+                                        <th scope="col">Conectivos</th>
+                                        <th scope="col">Estrutura Lógica</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Negação</td>
+                                        <td>~</td>
+                                        <td>~P</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Conjunção</td>
+                                        <td>^</td>
+                                        <td>P^Q</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Disjunção</td>
+                                        <td>v</td>
+                                        <td>PvQ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Conjunção</td>
+                                        <td>-></td>
+                                        <td>P->Q</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bicondicional</td>
+                                        <td>
+                                            <->
+                                        </td>
+                                        <td>P<->Q</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p>A <code>negação</code> pode ser utilizada para negar uma premissa ou uma fórmula relacionadas por
+                        conectivos.
+                        Neste caso os
+                        parênteses são utilizados para organizar a sequência de prioridade da fórmula aplicada. Ou seja,
+                        para negar uma
+                        fórmula relacionada a conectivo deve utilizar obrigatóriamente parênteses conforme apresentado
+                        na tabela abaixo.
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <div class="col-md-6 text-center">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Negação de Predicados</th>
+                                        <th scope="col">Negação de Predicados Relacionados por Conectivos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>~(P)</td>
+                                        <td>~(P->~Q)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>~P</td>
+                                        <td>~(PvQ)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <p>O <code>Módulo</code> utiliza letras maiúsculas podendo ser qualquer letra de "A" a "Z", para
+                        representar
+                        letras
+                        predicativas da fórmula proposicional.</p>
+
+                    <p>A <code>Conclusão</code> é definida através do identificador de conclusão "|-" seguida do
+                        argumento de
+                        conclusão.</p>
+                    <div class="d-flex justify-content-center">
+                        <div class="col-md-6 text-center">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Indicador de Conclusão</th>
+                                        <th scope="col">Argumento de Conclusão</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>|-</td>
+                                        <td>~(P->~Q)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <p>Para definição de <code>Premissas</code> (argumentos) é utilizado letras predicativas. Uma
+                        fórmula pode ser
+                        composta por zero
+                        ou mais premissas e obrigatóriamente uma conclusão, para definição de mais premissas deve-se
+                        utilizar a vírgula
+                        para determinar a separação das premissas.</p>
+                    <div class="d-flex justify-content-center">
+                        <div class="col-md-6 text-center">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Premissa</th>
+                                        <th scope="col">Premissas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>P->Q</td>
+                                        <td>P->Q,PvQ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>(P->Q)</td>
+                                        <td>(P->Q),(PvQ)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>~Q</td>
+                                        <td>P->Q,~Q</td>
+                                    </tr>
+                                    <tr>
+                                        <td>~(P->Q)</td>
+                                        <td>~(P->Q),Q</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <div class="card mb-5">
+                <div class="card-header custom-card-header py-3">
+                    <h6 class="m-0 font-weight-bold ">Cálculo Proposicional</h6>
+                </div>
+                <div class="card-body">
+                    <p>O cálculo proposicional possui um conjunto de regras de inferência que são capazes de gerar todas
+                        as formas válidas a partir de uma fórmula proposicional.
+                        Este processo consiste em uma série de etapas simples e precisas de raciocínio, chamadas de
+                        derivação ou prova. Cada etapa numa derivação é uma instância de uma das regras.</p>
+
+                    <p>Existem dez regras de inferência divididas em duas categorias que são utilizadas em conectivos
+                        lógicos de fórmulas proposicionais: <code> Regras de introdução e Regras de eliminação </code>.
+                        Das regras, cinco pertencem às regras de introdução e cinco às de eliminação. Oito das dez
+                        regras de inferência, são regras não-hipotéticas e as duas restantes são regras hipotéticas, os
+                        quais necessitam de uma hipótese.
+                    </p>
+
+
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <table class="table-regras" cellpadding="5">
+                                <tr><b>Regras de Introdução:</b> </tr><br>
+                                <tr>
+                                    <td>
+                                        <div class="regra-negacao shadow-sm">Redução ao Absurdo</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="regra-conjuncao shadow-sm">Introdução da Conjunção</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="regra-disjuncao shadow-sm">Introdução da Disjunção</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="regra-condicional shadow-sm">Prova do Condicional</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="regra-bicondicional shadow-sm">Introdução Bicondicional</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+
+                        <div class="col-md-6 text-center">
+                            <table class="table-regras" cellpadding="5">
+                                <tr><b>Regras de Eliminação:</b> </tr><br>
+                                <tr>
+                                    <td>
+                                        <div class="regra-negacao shadow-sm">Eliminação da Negação</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="regra-conjuncao shadow-sm">Eliminação da Conjunção</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="regra-disjuncao shadow-sm">Eliminação da Disjunção</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="regra-modusponens shadow-sm">Modus Ponens</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="regra-bicondicional shadow-sm">Eliminação Bicondicional</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <p class="mt-3">
+                        O processo de derivação consiste na utilização de regra sobre uma ou mais premissas de um
+                        argumento.
+                        Quando ocorre a derivação, é realizado uma representação visual do resultado obtido através
+                        instanciação
+                        da regra utilizada na qual obtém-se <code>resultado da instanciação</code>,
+                        <code>identificação das fórmulas proposicionais utilizadas</code> e <code>regra aplicada</code>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header custom-card-header py-3">
+                    <h6 class="m-0 font-weight-bold ">Estrutura da Árvores de Refutação</h6>
+                </div>
+                <div class="card-body">
+                    <p>
+                        A derivação do método de árvore de refutação é iniciada com a criação de um nó para de cada
+                        uma das <code>premissas</code> e um nó para a negação do argumento de <code>conclusão</code>.
+                        Considerando a fórmula <code>( P → Q), ~ Q, |- ~ P </code>. Teriamos inicialmente na árvore de
+                        refutação as
+                        premissas <code>P → Q</code> e <code> ~Q</code>, e a conclusão <code>~~P</code> após a aplicação
+                        da negação de seu valor lógico .
+                    </p>
+                    <div class="text-center mt-3 p-3" style="overflow-x: auto">
+                        <img src="assets/img/arvore-inicial.png" alt="arvore-inicial">
+                    </div>
+
+                    <p class="mt-3">
+                        Logo após é iniciado o processo de expansão, aplicando as regras correspondentes para os nós da
+                        árvore. Tais nós
+                        podem receber a aplicação uma unica vez. Desse modo, os nós que sofreram a aplicação de uma
+                        regra recebem a marcação
+                        do simbolo “✓”, não podendo mais ser utilizado.
+                    </p>
+                    <div class="text-center mt-3 p-3" style="overflow-x: auto">
+                        <img src="assets/img/arvore-ticado.png" alt="arvore-ticado">
+                    </div>
+                    <p class="mt-3">
+                        O ponto de parada ocorre quando a regra de fechamento é satisfeita. Tal
+                        regra é aplicada quando encontrado em seus nós ascendentes um elemento que o
+                        contradiz (por exemplo, considerando que um nó folha possua o valor predicativo <code>P</code>,
+                        seu elemento contraditório seria <code>~P</code>). Os nós fechados são marcados com um simbolo
+                        “X” e
+                        um ramo fechado não gera subárvores, e somente é dada como válida a fórmula que satisfez a regra
+                        de fechamento para todos os ramos da árvore.
+                    </p>
+                    <div class="text-center mt-3 p-3" style="overflow-x: auto">
+                        <img src="assets/img/arvore-fechada.png" alt="arvore-ticado">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="col-12 text-right mb-3">
+            <div class="btn-group mx-2 mt-3 ">
+                <button class="btn btn btn-func" (click)="concluir()">
+                    Concluir
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #exercicioFinish>
+    <!-- <div class="modal-header"> -->
+    <!-- <h4 class="modal-title pull-left">Erro ao Derivar</h4> -->
+    <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div> -->
+    <div class="modal-body" style="text-align: center;">
+        Este exercício já finalizado pelo jogador.
+    </div>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        Sair
+    </button>
+</ng-template>

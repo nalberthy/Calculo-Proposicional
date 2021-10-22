@@ -1,0 +1,36 @@
+services:
+  api:
+    build: API_CalculoProposicional\.
+    image: calculo-proposicional-api
+    container_name: calculo-proposicional-api
+    volumes:
+      - ./API_CalculoProposicional:/var/www/api
+    networks:
+      - calculo-proposicional
+  nginx:
+    image: nginx:latest
+    container_name: calculo-proposicional-nginx
+    volumes:
+      - ./API_CalculoProposicional:/var/www/api
+      - ./nginx:/etc/nginx/conf.d
+    ports:
+      - 8081:81
+    depends_on:
+      - api
+    networks:
+      - calculo-proposicional
+
+  mysql:
+    image: mysql
+    container_name: calculo-proposicional-mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: calculoproposicional
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+    networks:
+      - calculo-proposicional
+networks:
+  calculo-proposicional:
+    driver: bridge
