@@ -7,7 +7,7 @@
             </div>
             <div class="card-body">
                 <p>
-                    Permite a eliminação de um condicional. Ao obter um elemento igual ao antecedente de um condicional, é possível inferir seu consequente. Conforme mostrado na Figura 2, a partir do condicional (P → Q), é utilizado seu antecedente ( P ) para inferir seu consequente ( Q ), através da premissa ( P ).
+                    A seleção dos elementos para a derivação é realizada através do click na área de apresentação representada no exemplo pela área <b>A</b>. As seleções possuem um limite de até 3 seleções de linhas conforme a quantidade máxima utilizada por regras proposicionais. Ao selecionar, a linha desejada é marcada com a  cor azul, para cancelar a seleção basta clicar novamente na linha selecionada.
                 </p>
                 <p class="mt-3">Exemplo:</p>
                 <div class="row">
@@ -75,9 +75,214 @@
                 <p class="mt-3">Exemplo:</p>
                 <div class="row">
                     <div class="col-12 text-center">
-                            <img src="assets/image/eliminacao-negacao.png" alt="eliminacao negacao">
+                            <img src="assets/image/introducao-da-conjuncao.png" alt="introducao da conjuncao">
                     </div>
                 </div>              
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card mb-5">
+            <div class="card-header custom-card-header py-3">
+                <h6 class="m-0 font-weight-bold ">Regras do Calculo Proposicional: Eliminação de Conjunção (∧E) </h6>
+            </div>
+            <div class="card-body">
+                <p>
+                    Pode-se inferir um dos elementos da conjunção. Ou seja, de uma conjunção P^Q, pode-se inferir um dos seus conjuntos P, Q, conforme apresenta o exemplo.
+                </p>
+                <p class="mt-3">Exemplo:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <img src="assets/image/eliminacao-da-conjuncao.png" alt="introducao da conjuncao">
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card mb-5">
+            <div class="card-header custom-card-header py-3">
+                <h6 class="m-0 font-weight-bold ">Regras do Calculo Proposicional: Introdução da Disjunção (vI) </h6>
+            </div>
+            <div class="card-body">
+                <p>
+                    Pode-se inferir a disjunção de uma fórmula válida com qualquer outra fórmula. Conforme apresenta o exemplo 1, dada a fórmula P, pode-se inferir a disjunção de P com outro elemento não pertencente às etapas de dedução.
+                </p>
+                <p class="mt-3">Exemplo 1:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <img src="assets/image/introducao-da-disjuncao.png" alt="introducao da conjuncao">
+                    </div>
+                </div>              
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <table class="table-regras"  cellpadding="5" >
+                        <tr>
+                            <td><div class="regra-disjuncao shadow-sm"><p>Para utilizar a regra, o usuário deve selecionar a linha que deseja derivar (fórmula válida) e em seguida selecionar a regra de “introdução da disjunção”. Com isso, é liberado um campo de texto para inserir qualquer fórmula para realizar a inserção conforme apresenta o exemplo 2.</p></div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>  
+            <div class="card-body">
+                <p class="mt-3">Exemplo 2:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <img src="assets/image/aplicacao-introducao-da-disjuncao.png" alt="introducao da disjuncao">
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card mb-5">
+            <div class="card-header custom-card-header py-3">
+                <h6 class="m-0 font-weight-bold ">Regras do Calculo Proposicional: Eliminação da Disjunção (vE) </h6>
+            </div>
+            <div class="card-body">
+                <p>
+                    A partir de dois condicionais com consequentes iguais, pode-se inferir o consequente, se os antecedentes dos condicionais forem iguais aos elementos de uma disjunção. Conforme o exemplo, dado a disjunção (P v Q) e os condicionais (P→S) e (Q→S), pode-se inferir S utilizando os elementos da disjunção.
+                </p>
+                <p class="mt-3">Exemplo:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <img src="assets/image/eliminacao-da-disjuncao.png" alt="eliminacao da disjuncao">
+                    </div>
+                </div>              
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <table class="table-regras"  cellpadding="5" >
+                        <tr>
+                            <td>
+                                <div class="regra-disjuncao shadow-sm">
+                                    <p>
+                                        <span style="color: red;">Atenção: </span> Para aplicação da regra "Eliminação da Disjunção" deve-se
+                                        selecionar os elementos para derivação seguindo o critério de seleção de uma das ordens abaixo: 
+                                    </p>
+                                    <p>
+                                        1 - Selecionar disjunção e em seguida os
+                                        condicionais.<br>2 - Selecionar os condicionais e em seguida a disjunção.
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card mb-5">
+            <div class="card-header custom-card-header py-3">
+                <h6 class="m-0 font-weight-bold ">Regras do Calculo Proposicional: Introdução do Bicondicional (↔I) </h6>
+            </div>
+            <div class="card-body">
+                <p>
+                    A regra Introdução do Bicondicional consiste na junção de dois condicionais. Para isso, deve-se respeitar a seguinte regra. A partir de dois condicionais A = P→Q e B= Q→P, pode-se inferir o bicondicional se o antecedente do condicional A for igual ao consequente do condicional B e o antecedente do condicional B for igual ao consequente do condicional A.
+                </p>
+                <p class="mt-3">Exemplo:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <img src="assets/image/introducao-bicondicional.png" alt="introducao do bicondicional">
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card mb-5">
+            <div class="card-header custom-card-header py-3">
+                <h6 class="m-0 font-weight-bold ">Regras do Calculo Proposicional: Eliminação do Bicondicional (↔E) </h6>
+            </div>
+            <div class="card-body">
+                <p>
+                    A partir de um Bicondicional P↔Q, é possível inferir P→Q ou Q→P.
+                </p>
+                <p class="mt-3">Exemplo:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <img src="assets/image/eliminacao-bicondicional.png" alt="eliminacao do bicondicional">
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card mb-5">
+            <div class="card-header custom-card-header py-3">
+                <h6 class="m-0 font-weight-bold ">Regras do Calculo Proposicional: Aplicação de regras hipotéticas </h6>
+            </div>
+            <div class="card-body">
+                <p>
+                   As regras hipotéticas necessitam a introdução de uma formula proposicional, para introdução de uma formula deve selecionar uma regra hipotética e logo após a seleção, é disponibilizado um campo de texto para introduzir a fórmula a ser provada, conforme representado no exemplo 1.
+                </p>
+                <p class="mt-3">Exemplo 1:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <img src="assets/image/insercao-hipotese.png" alt="insercao hipotese">
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <table class="table-regras"  cellpadding="5" >
+                            <tr>
+                                <td><div class="regra-modusponens shadow-sm"><p> Para representar as áreas hipotéticas dentro da etapa de derivação, utiliza-se uma linha na horizontal identificando o início na inserção e decorre até a finalização da hipótese. Para finalizar a hipótese o usuário deve selecionar o início da hipótese (Figura A) e o final (Figura B), em seguida deverá marcar a opção de finalização da hipótese conforme representa o exemplo 2.</p></div></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p class="mt-3">Exemplo 2:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="assets/image/finalizacao-hipotese.png" alt="finalizacao hipotese">
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card mb-5">
+            <div class="card-header custom-card-header py-3">
+                <h6 class="m-0 font-weight-bold ">Regras do Calculo Proposicional: Prova do Condicional (PC) </h6>
+            </div>
+            <div class="card-body">
+                <p>
+                    É criado uma hipótese com o antecedente do condicional desejado e busca alcançar seu consequente.
+                </p>
+                <p class="mt-3">Exemplo:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <img src="assets/image/hipotese-pc.png" alt="hipotese pc">
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card mb-5">
+            <div class="card-header custom-card-header py-3">
+                <h6 class="m-0 font-weight-bold ">Regras do Calculo Proposicional: Redução ao Absurdo (RAA) </h6>
+            </div>
+            <div class="card-body">
+                <p>
+                    Tenta provar que uma dada fórmula é válida (por exemplo, P), quando o contrário desta fórmula (~P), por meio de uma hipótese, gera uma contradição, sendo assim refutada, e provando que a fórmula P é verdadeira, conforme o exemplo a seguir.
+                </p>
+                <p class="mt-3">Exemplo:</p>
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <img src="assets/image/hipotese-raa.png" alt="hipotese raa">
+                    </div>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <table class="table-regras"  cellpadding="5" >
+                        <tr>
+                            <td><div class="regra-negacao shadow-sm"><p>O processo de prova da hipótese RAA inicia-se com a contradição da conclusão da formula proposicional.</p></div></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
