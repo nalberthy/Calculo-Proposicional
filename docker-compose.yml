@@ -1,10 +1,9 @@
 services:
   api:
     build: API_CalculoProposicional\.
-    image: calculo-proposicional-api
-    container_name: calculo-proposicional-api
     volumes:
       - ./API_CalculoProposicional:/var/www/api
+    restart: always
     networks:
       - calculo-proposicional
   nginx:
@@ -20,15 +19,16 @@ services:
     networks:
       - calculo-proposicional
 
-  mysql:
-    image: mysql
-    container_name: calculo-proposicional-mysql
+  db:
+    image: mysql:5.7.37-oracle
+    restart: always
     ports:
       - 3306:3306
     environment:
-      MYSQL_DATABASE: calculoproposicional
+      MYSQL_DATABASE: calculo_proposicional
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: logica
+      MYSQL_PASSWORD: proposicional753159
     networks:
       - calculo-proposicional
 networks:
