@@ -307,12 +307,15 @@ class Construcao extends Controller
     }
 
 
-    public function verificaConclusao($conclusao,$derivacao){
+    public function verificaConclusao($conclusao, $derivacao){
         // percorre lista de derivação e verifica as conclusões
         foreach ($derivacao as $i){
-            if($this->arg->stringArg($conclusao[0]->getValor_obj())==$this->arg->stringArg($i->getPremissa()->getValor_obj())){
-                return TRUE;
+            if($i->getHipotese() === null) {
+                if($this->arg->stringArg($conclusao[0]->getValor_obj())==$this->arg->stringArg($i->getPremissa()->getValor_obj())){
+                    return TRUE;
+                }
             }
+            return FALSE;
         }
 
     }
