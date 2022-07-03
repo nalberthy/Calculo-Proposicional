@@ -315,7 +315,6 @@ class Construcao extends Controller
                     return TRUE;
                 }
             }
-            return FALSE;
         }
 
     }
