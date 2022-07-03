@@ -28,8 +28,8 @@ Route::post('derivacao/inicializar', 'Api\CalculoProposicionalController@Derivac
 Route::post('derivacao/derivar', 'Api\CalculoProposicionalController@Derivar');
 
 
-Route::post('derivacao/inicializar/exercicio/{id}', 'Api\CalculoProposicionalExercicioController@Derivacao');
-Route::post('derivacao/derivar/exercicio/{id}', 'Api\CalculoProposicionalExercicioController@Derivar');
+Route::post('derivacao/inicializar/exercicio', 'Api\CalculoProposicionalExercicioController@Derivacao');
+Route::post('derivacao/derivar/exercicio', 'Api\CalculoProposicionalExercicioController@Derivar');
 
 
 

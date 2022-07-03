@@ -62,7 +62,7 @@ export class ExerciciosComponent implements OnInit {
   inicializar(): void {
       this.request.exe_hash = this.exe_hash;
 
-      this.exercicioService.inicializar(this.route.snapshot.params.id,this.request).subscribe(
+      this.exercicioService.inicializar(this.request).subscribe(
 				response=> this.data = response
 			)
 
@@ -98,7 +98,7 @@ export class ExerciciosComponent implements OnInit {
         this.request.msg = this.data.msg;
           
 
-        this.exercicioService.derivar(this.route.snapshot.params.id,this.request).subscribe(
+        this.exercicioService.derivar(this.request).subscribe(
           response=> {
             this.data = response;
             this.form = this.fb.group({

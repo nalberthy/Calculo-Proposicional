@@ -12,12 +12,12 @@ export class ExercicioService {
     private http:HttpClient
   ) { }
 
-  inicializar(id:any, dataRequest:any){
-    return this.http.post(`${this.API}derivacao/inicializar/exercicio/`+id,dataRequest).pipe(take(1));
+  inicializar(dataRequest:any){
+    return this.http.post(`${this.API}derivacao/inicializar/exercicio/`,dataRequest).pipe(take(1));
   }
-  derivar(id:any, request:any){
+  derivar(request:any){
     // console.log(request)
-    return this.http.post(`${this.API}derivacao/derivar/exercicio/`+id,request).pipe(take(1));
+    return this.http.post(`${this.API}derivacao/derivar/exercicio/`,request).pipe(take(1));
   }
   getUsuario(usu_hash:any){
     var header = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': `Bearer ${usu_hash}` });
