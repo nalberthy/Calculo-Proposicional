@@ -1,6 +1,19 @@
 services:
+  app:
+    container_name: WEB_CalculoProposicional
+    image: node:16-slim
+    command: npm run start:ssl -- --host 0.0.0.0 --poll=2000
+    working_dir: /app
+    ports:
+        - 4200:4200
+    volumes:
+        - ./WEB_CalculoProposicional:/app
+        # - /app/node_modules
+    depends_on:
+        - api
+
   api:
-    build: API_CalculoProposicional\.
+    build: API_CalculoProposicional/.
     volumes:
       - ./API_CalculoProposicional:/var/www/api
     restart: always
@@ -23,7 +36,7 @@ services:
     image: mysql:5.7.37-oracle
     restart: always
     ports:
-      - 3306:3306
+      - 3307:3307
     environment:
       MYSQL_DATABASE: calculo_proposicional
       MYSQL_ROOT_PASSWORD: root
