@@ -1,6 +1,6 @@
 var gramLogic2 = (function() {
     var ambiente ='dev'
-    var hostdev='http://localhost:4200';
+    var hostdev='https://localhost:4200';
     return {
       validarEntrada: function(formula,prod=false) {
 
